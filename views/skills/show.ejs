@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Dev Skills</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Document</title>
 </head>
 <body>
-  <h1>Delete Skill?</h1>
-  <form action="/skills/<%= idx %>?_method=DELETE" method="POST" autocomplete="off">
-    <%= skill.skill %>
-    <button type="submit">Delete</button>
-  </form>
+   <h1>Skill #<%= skillNum %></h1>
+   <h3><%= skill.skill %></h3>
+   <h3>STATUS: <%= skill.learned ? 'Learned' : 'Still Learning' %></h3>
+   <a href="/skills/<%= skillNum - 1 %>/edit">EDIT SKILL</a>
 </body>
 </html>

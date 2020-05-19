@@ -21,12 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
-app.use(function(req, res, next) {
-  
-  req.time = new Date().toLocaleTimeString();
-  next();
-});
-
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
 
